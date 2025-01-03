@@ -8,11 +8,12 @@ interface TermCardProps {
     id: string;
     term: string;
     interpretation: string;
+    onDelete: (id:string) => Promise<void>;
 }
 
 
 
-export default function InterpretationCard({id ,term, interpretation}: TermCardProps) {
+export default function InterpretationCard({id ,term, interpretation,onDelete}: TermCardProps) {
 
     return (
         <div className="w-[60rem]">
@@ -24,7 +25,7 @@ export default function InterpretationCard({id ,term, interpretation}: TermCardP
             </div>
             <div className="flex justify-end gap-4 px-4 pb-4">
                 <Button variant="secondary" onClick={() => redirect(`/edit/${id}`)}>EDIT</Button>
-                <Button variant="destructive" onClick={ () => console.log('delete event ', id)}>DELETE</Button>
+                <Button variant="destructive" onClick={ () => onDelete(id)}>DELETE</Button>
             </div>
             <Separator/>
         </div>
