@@ -12,7 +12,7 @@ interface InterpretationListProps {
 
 async function deleteInterpretations(id : string): Promise<Response> {
     //await new Promise((resolve) => setTimeout(resolve, 6000));
-    const response = await fetch(`http://localhost:3000/api/interpretations/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/interpretations/${id}`, {
         method: "DELETE",
     });
 

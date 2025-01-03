@@ -9,13 +9,13 @@ import {Suspense} from "react";
 
 async function fetchInterpretationById(id: string): Promise<IInterpretation> {
 
-    const response = await fetch(`http://localhost:3000/api/interpretations/${id}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/interpretations/${id}`);
     return response.json();
 }
 
 async function updateInterpretation(id: string, term: string, interpretation: string){
 
-    const response = await fetch(`http://localhost:3000/api/interpretations/${id}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/interpretations/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",

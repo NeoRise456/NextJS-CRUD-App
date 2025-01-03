@@ -6,7 +6,7 @@ async function createInterpretation(_id: string,term: string, interpretation: st
 
     //await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    const response = await fetch("http://localhost:3000/api/interpretations", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/interpretations`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
