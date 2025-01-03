@@ -67,7 +67,7 @@ export async function GET(){
 
     try {
         const interpretations = await fetchInterpretation();
-        return NextResponse.json({data: interpretations});
+        return NextResponse.json(interpretations);
     }
     catch (error) {
         return NextResponse.json(

@@ -2,3 +2,19 @@ GET http://localhost:3000/api/interpretations
 Accept: application/json
 
 ###
+POST http://localhost:3000/api/interpretations
+Content-Type: application/json
+
+{
+    "term": "new term",
+  "interpretation": "This is the interpretation for the new term."
+}
+
+###
+PUT http://localhost:3000/api/interpretations/6774a792000909df1236
+Content-Type: application/json
+
+{
+"term": "monsedx",
+"interpretation": "PERO monsesassasasaso p dx"
+}
