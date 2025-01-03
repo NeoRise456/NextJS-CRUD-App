@@ -20,7 +20,7 @@ export default function Home() {
 
     return (
       <div className="flex flex-col py-8 px-16 items-center ">
-          <ErrorBoundary fallback={<p> Loading Failed </p>}>
+          <ErrorBoundary fallback={<span className="leading-7 [&:not(:first-child)]:mt-6"> Loading Failed </span>}>
               <Suspense fallback={
                   <span className="leading-7 [&:not(:first-child)]:mt-6">Loading...</span>
               }>
