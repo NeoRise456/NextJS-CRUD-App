@@ -62,7 +62,7 @@ async function updateInterpretationById(interpretationId:string, data: Interpret
     }
 }
 
-export async function GET(req: Request, {params} : {params : {id : string}}){
+export async function GET(req: Request, {params}: {params: Promise<{ id: string }>}){
     try{
         const { id } = await params;
         const interpretation = await fetchInterpretationById(id);
@@ -74,7 +74,7 @@ export async function GET(req: Request, {params} : {params : {id : string}}){
 
 }
 
-export async function DELETE(req: Request, {params} : {params : {id : string}}){
+export async function DELETE(req: Request, {params}: {params: Promise<{ id: string }>}){
     try{
         const { id } = await params;
         await deleteInterpretationById(id);
@@ -85,7 +85,7 @@ export async function DELETE(req: Request, {params} : {params : {id : string}}){
     }
 }
 
-export async function PUT(req: Request, {params} : {params : {id : string}}){
+export async function PUT(req: Request, {params}: {params: Promise<{ id: string }>}){
     try{
         const { id } = await params;
         const interpretation = await req.json();
