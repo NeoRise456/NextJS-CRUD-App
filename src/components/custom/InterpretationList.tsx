@@ -35,8 +35,7 @@ export default function InterpretationList({interpretationsPromise}: Interpretat
 
     const handleDelete = async (id : string) => {
         //await new Promise((resolve) => setTimeout(resolve, 6000));
-        //console.log("Deleting", id);
-        //console.log("Interpretations", interpretations );
+
         const response = await deleteInterpretations(id);
 
         if (response.status !== 200) {

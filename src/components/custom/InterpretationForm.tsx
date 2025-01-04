@@ -67,7 +67,7 @@ export default function InterpretationForm({id, interpretationPromise,formAction
             description: toastDescription + " Interpretation",
         });
 
-        redirect("/");
+        redirect("/interpretations");
     }
 
     return (
