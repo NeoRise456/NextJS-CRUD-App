@@ -1,3 +1,5 @@
+'use client'
+
 import {IInterpretation} from "@/models/interpretation";
 import {ErrorBoundary} from "react-error-boundary";
 import {Suspense} from "react";
