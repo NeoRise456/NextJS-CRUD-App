@@ -1,6 +1,6 @@
 # NextJS CRUD App
 
-This is a simple CRUD app built with NextJS, TailwindCSS, and Appwrite. 
+This is a CRUD app built with NextJS, TailwindCSS, and Appwrite. 
 It allows you to create, read, update, and delete interpretations of software related terms.
 
 ## Technologies
